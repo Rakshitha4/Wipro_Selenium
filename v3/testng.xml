@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="TestNGDemo" parallel="false">
+
+    <test name="AssertionsTest">
+        <classes>
+            <class name="com.example.AssertionTest"/>
+        </classes>
+    </test>
+
+
+    <test name="CrossBrowserTest">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.example.CrossBrowserTest"/>
+        </classes>
+    </test>
+
+    <test name="ParallelTest" parallel="methods" thread-count="2">
+        <classes>
+            <class name="com.example.TestSuitesDemo"/>
+        </classes>
+    </test>
+</suite>
